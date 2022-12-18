@@ -1,10 +1,19 @@
+
 import os
 def get_files(dir, extention):
 
 
     path =dir
-
+    
+    files_without_dir = []
+    files_with_dir = []
     for root, dirs, files in os.walk(path):
         for file in files:
             if(file.endswith(extention)):
+                files_with_dir.append(os.path.join(root,file))
+                files_without_dir.append(file)
                 print(os.path.join(root,file))
+    print(files_with_dir)
+    print(files_without_dir)
+    return files_without_dir, files_with_dir
+                
