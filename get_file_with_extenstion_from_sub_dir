@@ -1,9 +1,7 @@
 
 import os
-def get_files(dir, extention):
+def get_files(path, extention):
 
-
-    path =dir
     
     files_without_dir = []
     files_with_dir = []
